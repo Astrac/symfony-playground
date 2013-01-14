@@ -1,0 +1,7 @@
+astrac_tagging_patterns:
+  composite:
+    -
+      service: astrac.tagging_patterns_examples.command_processor
+      method: registerProcessor
+      tag: astrac.tagging_pattern_examples.command_processor
+      parameters: [ _service, key ]
