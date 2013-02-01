@@ -2,10 +2,10 @@
 
 namespace Astrac\Bundle\TaggingPatternsDemoBundle\RegisterMe;
 
-class EchoProcessor implements CommandProcessorInterface
+class NewLineProcessor implements CommandProcessorInterface
 {
     public function processCommand(CommandInterface $command) 
     {
-        echo $command->getString();
+        echo PHP_EOL;
     }    
 }

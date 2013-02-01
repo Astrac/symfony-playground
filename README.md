@@ -36,4 +36,8 @@ The parameters have the following meanings:
   the __service name is used to identify the tagged service itself.
 
 The example shows a common usage of this pattern: implementing a common access
-point for multiple implementations of a common interface.
+point for multiple implementations of a common interface. Which implementation is
+chosen to perform the given request depends on the internal status of this one;
+more in depth we have a composite command processor that delegates the execution
+of a given command object to a specific child depending on a parameter set in the
+request itself.
