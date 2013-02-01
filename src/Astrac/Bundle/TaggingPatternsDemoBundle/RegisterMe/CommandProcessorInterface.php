@@ -1,6 +1,6 @@
 <?php
 
-namespace Astrac\Bundle\TaggingPatternsBundle\Example;
+namespace Astrac\Bundle\TaggingPatternsDemoBundle\RegisterMe;
 
 interface CommandProcessorInterface {
     function processCommand(CommandInterface $command);

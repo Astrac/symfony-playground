@@ -6,9 +6,9 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\Reference;
 
-class RegisterCompositesPass implements CompilerPassInterface
+class AddRegistersCallsPass implements CompilerPassInterface
 {
-    const CONFIGURATION_PARAMETER = 'astrac.tagging_patterns.composites';
+    const CONFIGURATION_PARAMETER = 'astrac.tagging_patterns.registers';
     
     public function process(ContainerBuilder $container)
     {
@@ -16,12 +16,12 @@ class RegisterCompositesPass implements CompilerPassInterface
             $composites = $container->getParameter(self::CONFIGURATION_PARAMETER);
             foreach ($composites as $configuration) {
                 $taggedComposites = $container->findTaggedServiceIds($configuration['tag']);
-                $compositeService = $container->findDefinition($configuration['service']);
+                $compositeService = $container->findDefinition($configuration['register']);
                 foreach ($taggedComposites as $instanceId => $instanceAttributes) {
                     foreach ($instanceAttributes as $instanceAttribute) {
                         $parameters = array();
                         foreach ($configuration['parameters'] as $parameter) {
-                            if ($parameter === '_service') {
+                            if ($parameter === '__service') {
                                 $parameters[] = new Reference($instanceId);
                             } else {
                                 $parameters[] = $instanceAttribute[$parameter];

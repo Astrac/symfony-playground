@@ -1,19 +1,19 @@
 <?php
 
-namespace Astrac\Bundle\TaggingPatternsBundle\Command;
+namespace Astrac\Bundle\TaggingPatternsDemoBundle\Command;
 
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
-use Astrac\Bundle\TaggingPatternsBundle\Example\EchoCommand;
+use Astrac\Bundle\TaggingPatternsDemoBundle\RegisterMe\EchoCommand;
 use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 
-class CompositeExampleCommand extends ContainerAwareCommand
+class RegisterMeDemoCommand extends ContainerAwareCommand
 {
     protected function configure()
     {
         $this
-            ->setName('astrac:tagging-patterns-examples:composite')
-            ->setDescription('Example of DI tagging composite pattern');
+            ->setName('astrac:tagging-patterns-demo:register-me')
+            ->setDescription('Example of DI Register Me pattern');
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)

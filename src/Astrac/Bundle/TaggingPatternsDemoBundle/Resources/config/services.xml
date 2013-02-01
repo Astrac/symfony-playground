@@ -5,8 +5,8 @@
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <parameters>
-        <parameter key="astrac.tagging_patterns_examples.command_processor.class">Astrac\Bundle\TaggingPatternsBundle\Example\CompositeCommandProcessor</parameter>
-        <parameter key="astrac.tagging_patterns_examples.command_processor.echo.class">Astrac\Bundle\TaggingPatternsBundle\Example\EchoProcessor</parameter>
+        <parameter key="astrac.tagging_patterns_examples.command_processor.class">Astrac\Bundle\TaggingPatternsDemoBundle\RegisterMe\CompositeCommandProcessor</parameter>
+        <parameter key="astrac.tagging_patterns_examples.command_processor.echo.class">Astrac\Bundle\TaggingPatternsDemoBundle\RegisterMe\EchoProcessor</parameter>
     </parameters>
 
     <services>

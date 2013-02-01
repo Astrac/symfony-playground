@@ -1,6 +1,7 @@
 imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
+    - { resource: register_me.yml }
 
 framework:
     #esi:             ~
@@ -58,12 +59,3 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
-
-
-astrac_tagging_patterns:
-  composite:
-    -
-      service: astrac.tagging_patterns_examples.command_processor
-      method: registerProcessor
-      tag: astrac.tagging_pattern_examples.command_processor
-      parameters: [ key, _service ]

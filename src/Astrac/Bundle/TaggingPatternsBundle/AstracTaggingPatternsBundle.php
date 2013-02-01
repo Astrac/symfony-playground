@@ -4,7 +4,7 @@ namespace Astrac\Bundle\TaggingPatternsBundle;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
-use Astrac\Bundle\TaggingPatternsBundle\DependencyInjection\Compiler\RegisterCompositesPass;
+use Astrac\Bundle\TaggingPatternsBundle\DependencyInjection\Compiler\AddRegistersCallsPass;
 
 /**
  * Bundle.
@@ -15,6 +15,6 @@ class AstracTaggingPatternsBundle extends Bundle
 {
     public function build(ContainerBuilder $container)
     {
-        $container->addCompilerPass(new RegisterCompositesPass());
+        $container->addCompilerPass(new AddRegistersCallsPass());
     }
 }

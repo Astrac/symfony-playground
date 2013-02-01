@@ -14,10 +14,10 @@ class Configuration implements ConfigurationInterface
 
         $rootNode
             ->children()
-                ->arrayNode('composite')
+                ->arrayNode('register_me')
                     ->prototype('array')
                         ->children()
-                            ->scalarNode('service')->end()
+                            ->scalarNode('register')->end()
                             ->scalarNode('method')->end()
                             ->scalarNode('tag')->end()
                             ->arrayNode('parameters')
