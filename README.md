@@ -1,8 +1,8 @@
-Astrac bundles demo project
+My Symfony playground
 ===========================
 
-This project contains some code showing some symfony bundles I developed for the
-Symfony 2 framework.
+This project contains some code showing some symfony bundles that I developed (or 
+that I'm developing) for the Symfony 2.x framework.
 
 Tagging patterns bundle
 -----------------------
